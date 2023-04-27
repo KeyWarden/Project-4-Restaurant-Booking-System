@@ -22,7 +22,9 @@ class Timeslot(models.Model):
 
 
 class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking")
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="booking"
+    )
     date = models.DateField(null=False, blank=False)
     number_of_people = models.IntegerField(null=False, blank=False)
     table = models.ForeignKey(
