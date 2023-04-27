@@ -33,3 +33,12 @@ class Booking(models.Model):
     timeslot = models.ForeignKey(
         Timeslot, on_delete=models.CASCADE, related_name="booking"
     )
+
+    def __str__(self):
+        return (
+            str(self.user) + " " + str(self.date) + " " + str(self.table) +
+            " " + str(self.timeslot)
+            )
+
+    class Meta:
+        ordering = ['date']
