@@ -1,4 +1,6 @@
 {% extends "booking/site_page.html" %}
 {% block content %}
-    <h1>Test Home</h1>
+    {% if user.is_authenticated %}
+    {% else %}
+    {% endif %}
 {% endblock %}

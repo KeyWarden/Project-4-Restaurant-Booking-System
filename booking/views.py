@@ -1,10 +1,15 @@
 from django.shortcuts import render
+from .models import Booking
 
 # Create your views here.
 
 
 def home_page(request):
-    return render(request, 'booking/index.html')
+    bookings = Booking.objects.all()
+    context = {
+        'bookings': bookings
+    }
+    return render(request, 'booking/index.html', context)
 
 
 def open_contacts(request):
