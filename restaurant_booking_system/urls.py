@@ -26,5 +26,4 @@ urlpatterns = [
     path('contacts/', open_contacts, name='Contacts'),
     path('booking/', make_booking, name='Make Booking'),
     path('accounts/', include('allauth.urls')),
-    # path('', , name='Booking')
 ]

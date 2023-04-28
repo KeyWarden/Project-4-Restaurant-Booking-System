@@ -1,6 +1,6 @@
 {% extends "booking/site_page.html" %}
 {% block title %}
-    <title>Papa Joe's Table Bookings</title>
+    <title>Papa Joe's Table Bookings - Home</title>
 {% endblock %}
 {% block nav %}
     <li class="nav-item">
@@ -12,12 +12,11 @@
 {% endblock %}
 {% block content %}
     {% if user.is_authenticated %}
-
         <table>
             <tr>
                 <td>Date</td>
                 <td>Timeslot</td>
-                <td>Date</td>
+                <td>Table Size</td>
             </tr>
             {% for booking in bookings %}
                 {% if user == booking.user %}

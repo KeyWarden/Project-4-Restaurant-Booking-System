@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Booking
+from .models import Table
+from .models import Timeslot
 
 # Create your views here.
 
@@ -17,4 +19,10 @@ def open_contacts(request):
 
 
 def make_booking(request):
-    return render(request, 'booking/booking.html')
+    tables = Table.objects.all()
+    timeslots = Timeslot.objects.all()
+    context = {
+        'tables': tables,
+        'timeslots': timeslots
+    }
+    return render(request, 'booking/booking.html', context)
