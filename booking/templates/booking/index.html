@@ -1,9 +1,13 @@
 {% extends "booking/site_page.html" %}
 {% block content %}
     {% if user.is_authenticated %}
-        {{ bookings }}
 
         <table>
+            <tr>
+                <td>Date</td>
+                <td>Timeslot</td>
+                <td>Date</td>
+            </tr>
             {% for booking in bookings %}
                 {% if user == booking.user %}
                 <tr>
@@ -14,7 +18,7 @@
                 {% endif %}
             {% endfor %}
         </table>
-        <button></button>
+        <button type="button"><a href="/booking">Make a new booking</a></button>
     {% else %}
     {% endif %}
 {% endblock %}
