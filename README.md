@@ -170,7 +170,7 @@ The Credits section is where you can credit all the people and sources you used 
 
 ### Code Used
 
-If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
+I borrowed the initial code for the navbar from the "I Think Therefore I Blog" Walkthrough Project, solely to acquire the raw functionality of both the navbar itself as well as the login/logout/register functionality as quickly as possible. I also did the same for the Bootstrap links, for the same reason.
 
 ### Content
 
