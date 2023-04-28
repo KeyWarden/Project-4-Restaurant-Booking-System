@@ -1,4 +1,15 @@
 {% extends "booking/site_page.html" %}
+{% block title %}
+    <title>Papa Joe's Table Bookings</title>
+{% endblock %}
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/contacts">Contact Us</a>
+    </li>
+{% endblock %}
 {% block content %}
     {% if user.is_authenticated %}
 

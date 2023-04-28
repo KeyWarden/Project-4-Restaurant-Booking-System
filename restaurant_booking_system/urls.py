@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from booking.views import home_page
 from booking.views import open_contacts
+from booking.views import make_booking
 # from booking.views import
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='Home'),
     path('contacts/', open_contacts, name='Contacts'),
+    path('booking/', make_booking, name='Make Booking'),
     path('accounts/', include('allauth.urls')),
     # path('', , name='Booking')
 ]

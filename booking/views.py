@@ -14,3 +14,7 @@ def home_page(request):
 
 def open_contacts(request):
     return render(request, 'booking/contacts.html')
+
+
+def make_booking(request):
+    return render(request, 'booking/booking.html')
