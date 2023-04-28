@@ -1,6 +1,20 @@
 {% extends "booking/site_page.html" %}
 {% block content %}
     {% if user.is_authenticated %}
+        {{ bookings }}
+
+        <table>
+            {% for booking in bookings %}
+                {% if user == booking.user %}
+                <tr>
+                    <td>{{booking.date}}</td>
+                    <td>{{booking.timeslot}}</td>
+                    <td>{{booking.table.category}}</td>
+                </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+        <button></button>
     {% else %}
     {% endif %}
 {% endblock %}
