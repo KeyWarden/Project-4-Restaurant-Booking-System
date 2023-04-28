@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 
-class Tables(models.Model):
+class Table(models.Model):
     size = models.IntegerField(null=False, blank=False)
     category = models.CharField(max_length=10, null=False, blank=False)
     upper_limit = models.IntegerField(null=False, blank=False)
@@ -26,9 +26,8 @@ class Booking(models.Model):
         User, on_delete=models.CASCADE, related_name="booking"
     )
     date = models.DateField(null=False, blank=False)
-    number_of_people = models.IntegerField(null=False, blank=False)
     table = models.ForeignKey(
-        Tables, on_delete=models.CASCADE, related_name="booking"
+        Table, on_delete=models.CASCADE, related_name="booking"
     )
     timeslot = models.ForeignKey(
         Timeslot, on_delete=models.CASCADE, related_name="booking"
