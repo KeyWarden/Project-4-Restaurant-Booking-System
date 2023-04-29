@@ -15,7 +15,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         {% if is_new is False %}
-        <div>
+        <div class="alert alert-danger">
             <p>Unfortunately that Table is not available at that time, please try another.</p>
         </div>
         {% endif %}
