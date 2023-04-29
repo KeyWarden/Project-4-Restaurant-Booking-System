@@ -75,6 +75,7 @@ def edit_booking(request, booking_id):
             timeslot = form.cleaned_data['timeslot']
             is_new = validate_booking(date, table, timeslot)
             if is_new:
+                booking.delete()
                 Booking.objects.create(
                     user=user, date=date,
                     table=table,
@@ -94,3 +95,9 @@ def edit_booking(request, booking_id):
         'is_new': is_new
     }
     return render(request, 'booking/edit_booking.html', context)
+
+
+def delete_booking(request, booking_id):    
+    booking = get_object_or_404(Booking, id=booking_id)
+    booking.delete()
+    return redirect('Home')
