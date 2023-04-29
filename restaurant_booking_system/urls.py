@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from booking.views import home_page
+from booking.views import view_index
 from booking.views import open_contacts
 from booking.views import make_booking
 from booking.views import edit_booking
@@ -25,6 +26,7 @@ from booking.views import delete_booking
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='Home'),
+    path('index/', view_index, name='Index'),
     path('contacts/', open_contacts, name='Contacts'),
     path('booking/', make_booking, name='Make Booking'),
     path('edit/<booking_id>', edit_booking, name='Edit Booking'),

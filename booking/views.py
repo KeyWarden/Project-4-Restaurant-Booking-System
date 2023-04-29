@@ -9,6 +9,10 @@ from .forms import BookingForm
 
 
 def home_page(request):
+    return render(request, 'booking/home.html')
+
+
+def view_index(request):
     bookings = Booking.objects.all()
     context = {
         'bookings': bookings
@@ -36,7 +40,7 @@ def make_booking(request):
                     table=table,
                     timeslot=timeslot
                     )
-                return redirect('Home')
+                return redirect('Index')
             else:
                 form = BookingForm()
                 context = {
@@ -81,7 +85,7 @@ def edit_booking(request, booking_id):
                     table=table,
                     timeslot=timeslot
                     )
-                return redirect('Home')
+                return redirect('Index')
             else:
                 form = BookingForm(instance=booking)
                 context = {
@@ -100,4 +104,4 @@ def edit_booking(request, booking_id):
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
-    return redirect('Home')
+    return redirect('Index')

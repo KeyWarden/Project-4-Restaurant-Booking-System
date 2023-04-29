@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,16 +26,22 @@
         .bg-lion {
             background-color: #b69263;
         }
+
+        .logo {
+            font-family: 'Times New Roman', Times, serif;
+        }
     </style>
     {% block title %}
     {% endblock %}
 </head>
 <body class="bg-cream position-relative">
     <header class="container-fluid bg-header position-relative">
-        <a href="/" class="me-auto ms-auto">Mama Jo's</a>
-        <nav class="navbar navbar-expand-lg navbar-light bg-emerald">
+        <div class="mx-auto p-2 col-6 text-center fs-2 fc">
+            <a href="/" class="logo"><img src="{% static 'images/site_logo.png' %}" alt="Site Logo" class="img-fluid col-sm-3"></a>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-light bg-emerald">
             <div class="container col-6">
-                <button class="navbar-toggler me-auto ms-auto mb-2 mb-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                <button class="navbar-toggler me-auto ms-auto mb-2 mb-lg-0 bg-cream" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -62,5 +69,6 @@
 
     {% block content %}
     {% endblock %}
+    <img src="{% static 'images/pizza.jpg' %}" alt="Tasty Pizza" class="img-fluid rounded mx-auto d-block">
 </body>
 </html>
