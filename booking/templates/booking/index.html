@@ -1,6 +1,6 @@
 {% extends "booking/site_page.html" %}
 {% block title %}
-    <title>Papa Joe's Table Bookings - Home</title>
+    <title>Mama Jo's - Home</title>
 {% endblock %}
 {% block nav %}
     <li class="nav-item">
@@ -12,39 +12,43 @@
 {% endblock %}
 {% block content %}
     {% if user.is_authenticated %}
-        <table>
-            <tr>
-                <td>Date</td>
-                <td>Timeslot</td>
-                <td>Table Size</td>
-            </tr>
-            {% for booking in bookings %}
-                {% if user == booking.user %}
+        <div class="position-relative top-50 bottom-50 start-50 translate-middle-x bg-lion w-50">
+            <table class="table table-striped table-borderless">
                 <tr>
-                    <td>{{booking.date}}</td>
-                    <td>{{booking.timeslot}}</td>
-                    <td>{{booking.table.category}}</td>
-                    <td>
-                        <a href="/edit/{{ booking.id }}">
-                            <button type="button">
-                                Edit
-                            </button>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/delete/{{ booking.id }}">
-                            <button type="button">
-                                Delete
-                            </button>
-                        </a>
-                    </td>
+                    <td>Date</td>
+                    <td>Timeslot</td>
+                    <td>Table Size</td>
+                    <td>Edit Booking</td>
+                    <td>Delete Booking</td>
                 </tr>
-                {% endif %}
-            {% endfor %}
-        </table>
-        <a href="/booking">
-            <button type="button">Make a new booking</button>
-        </a>
+                {% for booking in bookings %}
+                    {% if user == booking.user %}
+                    <tr>
+                        <td>{{booking.date}}</td>
+                        <td>{{booking.timeslot}}</td>
+                        <td>{{booking.table.category}}</td>
+                        <td>
+                            <a href="/edit/{{ booking.id }}">
+                                <button type="button">
+                                    Edit
+                                </button>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/delete/{{ booking.id }}">
+                                <button type="button">
+                                    Delete
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+            <a href="/booking" class="position-absolute bottom-0 end-0">
+                <button type="button">Make a new booking</button>
+            </a>
+        </div>
     {% else %}
     {% endif %}
 {% endblock %}

@@ -11,7 +11,7 @@
     </li>
 {% endblock %}
 {% block content %}
-    <form method="POST">
+    <form method="POST" class="position-relative top-50 bottom-50 start-50 translate-middle-x bg-lion w-50">
         {% csrf_token %}
         {{ form.as_p }}
         {% if is_new is False %}
