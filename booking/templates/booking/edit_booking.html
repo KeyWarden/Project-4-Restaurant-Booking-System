@@ -13,33 +13,12 @@
 {% block content %}
     <form method="POST">
         {% csrf_token %}
+        {{ form.as_p }}
+        {% if is_new is False %}
         <div>
-            <p>
-                <label for="id_date">Date: </label>
-                <input type="date" name="date_name" id="id_date" required>
-            </p>
+            <p>Unfortunately that Table is not available at that time, please try another.</p>
         </div>
-        <div>
-            <p>
-                <label for="id_size">Table Size: </label>
-                <select name="size_name" id="id_size" required>
-                    <option value="Small">Small [2-4]</option>
-                    <option value="Medium">Medium [4-6]</option>
-                    <option value="Large">Large [6-10]</option>
-                    <option value="Grand">Grand [10-14]</option>
-                </select>
-            </p>
-        </div>
-        <div>
-            <p>                
-                <label for="id_time">Time: </label>
-                <select name="time_name" id="id_time" required>
-                    {% for timeslot in timeslots %}
-                        <option value="{{ timeslot }}">{{ timeslot }}</option>
-                    {% endfor %}
-                </select>
-            </p>
-        </div>
+        {% endif %}
         <div>
             <p>
                 <button type="submit">Update Booking</button>

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .models import Table
 from .models import Timeslot
@@ -44,25 +44,6 @@ def make_booking(request):
                     'is_new': is_new
                 }
                 return render(request, 'booking/booking.html', context)
-#        date = request.POST.get('date_name')
-#        table_size = request.POST.get('size_name')
-#        time = request.POST.get('time_name')
-#        timeslots = Timeslot.objects.filter(time=time)
-#        timeslots_list = []
-#        for instance in timeslots:
-#            timeslots_list.append(instance)
-#        timeslot = timeslots_list[0]
-#        table_id = get_table(date, table_size, timeslot)
-#        user = request.user
-#        if table_id != 0:
-#            table = Table.objects.get(pk=table_id)
-#            Booking.objects.create(
-#                user=user, date=date, table=table, timeslot=timeslot
-#                )
-#
-#            return redirect('Home')
-#        elif table_id == 0:
-#            return redirect('Make Booking')
     form = BookingForm()
     context = {
         'form': form,
@@ -84,4 +65,32 @@ def validate_booking(date, table, timeslot):
 
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
-    return render(request, 'booking/edit_booking.html')
+    is_new = True
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            user = request.user
+            date = form.cleaned_data['date']
+            table = form.cleaned_data['table']
+            timeslot = form.cleaned_data['timeslot']
+            is_new = validate_booking(date, table, timeslot)
+            if is_new:
+                Booking.objects.create(
+                    user=user, date=date,
+                    table=table,
+                    timeslot=timeslot
+                    )
+                return redirect('Home')
+            else:
+                form = BookingForm(instance=booking)
+                context = {
+                    'form': form,
+                    'is_new': is_new
+                }
+                return render(request, 'booking/edit_booking.html', context)
+    form = BookingForm(instance=booking)
+    context = {
+        'form': form,
+        'is_new': is_new
+    }
+    return render(request, 'booking/edit_booking.html', context)
