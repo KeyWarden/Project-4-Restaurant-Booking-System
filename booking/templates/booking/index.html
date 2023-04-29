@@ -11,6 +11,9 @@
     </li>
 {% endblock %}
 {% block content %}
+{% for booking in bookings %}
+{{ booking.date }}
+{% endfor %}
     {% if user.is_authenticated %}
         <table>
             <tr>

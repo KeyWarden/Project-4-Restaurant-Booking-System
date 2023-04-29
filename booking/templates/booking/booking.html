@@ -11,31 +11,34 @@
     </li>
 {% endblock %}
 {% block content %}
-    <form method="POST" action="add">
-        {% crsf_token %}
+    <form method="POST" action="/booking/">
+        {% csrf_token %}
+        {% for table in tables %}
+        {{ table.pk }}
+        {% endfor %}
         <div>
             <p>
                 <label for="id_date">Date: </label>
-                <input type="date" name="date_name" id="id_date">
+                <input type="date" name="date_name" id="id_date" required>
             </p>
         </div>
         <div>
             <p>
                 <label for="id_size">Table Size: </label>
-                <select name="size_name" id="id_size">
-                    <option value="small">Small [2-4]</option>
-                    <option value="medium">Medium [4-6]</option>
-                    <option value="large">Large [6-10]</option>
-                    <option value="grand">Grand [10-14]</option>
+                <select name="size_name" id="id_size" required>
+                    <option value="Small">Small [2-4]</option>
+                    <option value="Medium">Medium [4-6]</option>
+                    <option value="Large">Large [6-10]</option>
+                    <option value="Grand">Grand [10-14]</option>
                 </select>
             </p>
         </div>
         <div>
             <p>                
                 <label for="id_time">Time: </label>
-                <select name="time_name" id="id_time">
+                <select name="time_name" id="id_time" required>
                     {% for timeslot in timeslots %}
-                        <option value="{{ timeslot.time }}">{{ timeslot.time }}</option>
+                        <option value="{{ timeslot }}">{{ timeslot }}</option>
                     {% endfor %}
                 </select>
             </p>
