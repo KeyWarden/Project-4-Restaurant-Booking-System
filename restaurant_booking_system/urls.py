@@ -18,6 +18,7 @@ from django.urls import path, include
 from booking.views import home_page
 from booking.views import open_contacts
 from booking.views import make_booking
+from booking.views import edit_booking
 # from booking.views import
 
 urlpatterns = [
@@ -25,5 +26,6 @@ urlpatterns = [
     path('', home_page, name='Home'),
     path('contacts/', open_contacts, name='Contacts'),
     path('booking/', make_booking, name='Make Booking'),
+    path('edit/<booking_id>', edit_booking, name='Edit Booking'),
     path('accounts/', include('allauth.urls')),
 ]

@@ -11,7 +11,7 @@ class Table(models.Model):
     upper_limit = models.IntegerField(null=False, blank=False)
 
     def __str__(self):
-        return self.category + str(self.pk)
+        return "Table " + str(self.pk) + " [" + self.category + "]"
 
 
 class Timeslot(models.Model):

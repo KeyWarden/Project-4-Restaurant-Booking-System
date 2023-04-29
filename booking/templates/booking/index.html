@@ -11,9 +11,6 @@
     </li>
 {% endblock %}
 {% block content %}
-{% for booking in bookings %}
-{{ booking.date }}
-{% endfor %}
     {% if user.is_authenticated %}
         <table>
             <tr>
@@ -27,11 +24,20 @@
                     <td>{{booking.date}}</td>
                     <td>{{booking.timeslot}}</td>
                     <td>{{booking.table.category}}</td>
+                    <td>
+                        <a href="/edit/{{ booking.id }}">
+                            <button type="button">
+                                Edit
+                            </button>
+                        </a>
+                    </td>
                 </tr>
                 {% endif %}
             {% endfor %}
         </table>
-        <button type="button"><a href="/booking">Make a new booking</a></button>
+        <a href="/booking">
+            <button type="button">Make a new booking</button>
+        </a>
     {% else %}
     {% endif %}
 {% endblock %}
