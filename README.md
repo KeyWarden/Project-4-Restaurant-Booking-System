@@ -178,8 +178,8 @@ Who wrote the content for the website? Was it yourself - or have you made the si
 
 ###  Media
 
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
+There are only two images used in my site. The first is the logo at the top of every page. As this image was created by me, there is no source to give. The second is the pizza image at the bottom of every page, which I acquired from searching for images on Bing with the 'Free to search and use' filter active. The link to it is here: [Pizza Image](https://yanzap.blogspot.com/2011/09/pizza-time.html)
   
 ###  Acknowledgments
 
-If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
+I'd like to thank my mentor
