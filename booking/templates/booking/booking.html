@@ -11,7 +11,7 @@
     </li>
 {% endblock %}
 {% block content %}
-    <form method="POST" action="/booking/" class="position-relative top-50 bottom-50 start-50 translate-middle-x bg-lion w-50">
+    <form method="POST" action="/booking/" class="mx-auto p-2 bg-lion" style="width: fit-content;">
         {% csrf_token %}
         {{ form.as_p }}
         {% if is_new is False %}
@@ -21,7 +21,7 @@
         {% endif %}
         <div>
             <p>
-                <button type="submit">Make Booking</button>
+                <button type="submit" class="btn btn-light">Make Booking</button>
             </p>
         </div>
     </form>
