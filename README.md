@@ -1,14 +1,10 @@
-# PROJECT NAME TO GO HERE
+# Project 4: Restaurant Booking System
 
-👩🏻‍💻 View an example of this section [here](https://github.com/kera-cudmore/Bully-Book-Club#bully-book-club-website)
-
-Add a Blurb about the site here, what does it do, why did you build it?
+The Mama Jo's Booking Site is designed to be a responsive website that allows customers of the Mama Jo's Pizza Restaurant to view the site across a range of devices so that they can book tables at said restaurant ahead of time.
 
 Add an image of the finished site here. I like to use [amiresponsive](https://ui.dev/amiresponsive) to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
 
 Add a link to the live site here, for Milestone 1 this will be the GitHub Pages Link from when you deployed the site.
-
-If you want to add optional [shields.io](https://shields.io) badges to your README, I like to add them to this section.
 
 ---
 
@@ -19,13 +15,10 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
 
 * [Design](#design)
   * [Colour Scheme](#colour-scheme)
-  * [Typography](#typography)
   * [Imagery](#imagery)
   * [Wireframes](#wireframes)
 
 * [Features](#features)
-  * [General Features on Each Page](#general-features-on-each-page)
-  * [Future Implementations](#future-implementations)
   * [Accessibility](#accessibility)
 
 * [Technologies Used](#technologies-used)
@@ -50,89 +43,107 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
 
 ## User Experience (UX)
 
-👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/Bully-Book-Club#user-experience-ux)
+### Initial Discussion
+
+Mama Jo's Booking Site is an online service designed to allow users to book tables at the Mama Jo's Pizza Restuarant ahead of time. Users with accounts can see any and all bookings they have made, can make new bookings, and can edit or even delete existing bookings if they should so desire.
+
+#### Key information for this site
+
+* How to sign up or sign in to the site.
+* How to book tables for yourself.
+* A way for people to contact the Restaurant with queries or feedback.
 
 ### User Stories
 
-Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
+#### Client Goals
+
+* To be able to view the site on a range of device sizes.
+* To make it easy for potential customers to sign up to and make use of the site's services.
+* To allow people to be able to contact the Restaurant with questions or to report problems.
+
+#### New Customer Goals
+
+* I want to easily sign up to and make use of the site's services.
+* I want to quickly and easily search for available tables.
+* I want to be able to access other sites or socials linked to the Restuarant so as to learn more about them.
+
+#### Returning Customer Goals
+
+* I want to be able to see, alter, or even cancel any existing bookings. 
+* I want to be able to specify all relevant details while booking in order to quickly book specific tables.
+* I want to be able to contact the Restaurant to report any problems that might occur.
 
 ## Design
 
-👩🏻‍💻 View an example of a completed design section [here](https://github.com/kera-cudmore/earth-day-hackathon-2022#Design)
-
 ### Colour Scheme
 
-Add all information about your colour scheme for your site here. You can explain why you choose the colours you did?
+![Mama Jo's Colour Scheme](Images/Readme/colour_palette.png)
 
-I like to include a palette of the colour scheme here, my favourite site for creating a colour palette is [coolors](https://coolors.co/), but there are lots of other sites that also do the same thing, like [ColorSpace](https://mycolor.space/?hex=%23F5F5F5&sub=1), [Muzli Colors](https://colors.muz.li/), [Adobe Colour Wheel](https://color.adobe.com/create/color-wheel) and [Canva](https://www.canva.com/colors/color-palette-generator/) to name a few.
-
-### Typography
-
-If you've imported fonts to use in your project, add some information about them here. You can include information like:
-
-Why did you choose the font you have?
-Is this an accessibly friendly font?
-What weights have you included?
-
-I also like to include an image of the fonts chosen as a reference.
-
-[Google Fonts](https://fonts.google.com/) is a popular choice for importing fonts to use in your project, as it doesn't require you to download the fonts to use them.
+The website uses a palette colours inspired by other Italian Restaurants. The colour palette was created using the [Coolors](https://coolors.co/) website, and has been kept to almost excusively, with only one exception: the vanilla colour was replaced with cream - #F5F7CA to be exact - as it was found to be more appealing in practice.
 
 ### Imagery
 
-Use this section to explain what sort of imagery you plan to use through your site.
+I have only used two images throughout the entire site, although they are present on the Home, Bookings, and Contacts pages. One is a custom logo for the Restaurant, and the other is a free to use and share picture of pizza. I have credited the latter in the [credits](#Credits) section.
 
 ### Wireframes
 
-Add the images or links for your wireframes here.
+The only major wireframe used in this site was for the database, specifically an example diagram used to better envision what kind of database I intended to set up.
 
-There are lots of different options to create your wireframes - Code Institute students can access [Balsamiq](https://balsamiq.com/) as part of the course.
+![Example Database Diagram](Images/Readme/database_diagram.png)
 
-Some other options include [Figma](https://www.figma.com/), [AdobeXD](https://www.adobe.com/products/xd.html), [Sketch](https://www.sketch.com/?utm_source=google&utm_medium=cpc&adgroup=uxui&device=c&matchtype=e&utm_campaign=ADDICTMOBILE_SKETCH_GAD_DG_UK_T1_ALWAYS-ON_S_TRF_PROS_BRAND&utm_term=sketch&utm_source=google&utm_medium=cpc&utm_content=TOF_BRND__generic&hsa_acc=8710913982&hsa_cam=16831089317&hsa_grp=134620695759&hsa_ad=592060065319&hsa_src=g&hsa_tgt=kwd-14921750&hsa_kw=sketch&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwr4eYBhDrARIsANPywCjRIFn93DMezYnsyE5Fic_8l8kynJtut0GYMU01TiohHjwziFtlH0gaAhteEALw_wcB) and [Mockup](https://apps.apple.com/us/app/mockup-sketch-ui-ux/id1527554407) to name just a few! Or you can even go old school and get those wireframes completed using pen and paper. Just snap an image of the completed wireframes to add the images to the README.
+Obviously the User section is only there to help me better envision how I wanted to set up the database, and I chose in the end to remove the "number of people" option entirely, as it was largely unnecessary due to the existance of the Table Size attribute, but the diagram otherwise perfectly covers the database that was implemented.
 
 ## Features
 
-👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/TheQuizArms#Features)
+The website is composed of five pages, two of which are accessible from the navigation menu (Home page and Contacts page). The remaining three are the Index page, where the user can view and delete their existing bookings if they should have any, the Bookings page, where the user can make a new booking, and the Edit page, where the user can edit the details of a chosen booking.
 
-This section can be used to explain what pages your site is made up of.
+* All pages on the website have the following:
 
-### General features on each page
+  * A header containing a responsive navigation bar and restaurant logo. The navbar allows the user to navigate through the site. When viewing on mobile devices, the navigation links change to a burger toggler, so as to make the site look cleaner on such devices and to promote good UX design.
 
-If there is a feature that appears on all pages of your site, include it here. Examples of what to include would the the navigation, a footer and a favicon.
+  * A Pizza image at the bottom of the site, to improve the aesthetcs and make to site feel more welcoming.
 
-I then like to add a screenshot of each page of the site here, i use [amiresponsive](https://ui.dev/amiresponsive) which allows me to grab an image of the site as it would be displayed on mobile, tablet and desktop, this helps to show the responsiveness of the site.
+* The Home page excusively features a simple welcoming message, which informs the user of the site's purpose, as well as how to use its services. It also features links to the Index page.
 
-### Future Implementations
+* The Index page excusively features a table containing all bookings the user has made, if they have made any, as well as a button to take them to the Bookings page in order to make new bookings. If the user has made any bookings, then this page also features two buttons by every booking: the edit button, which takes the user to the Edit page so they can edit the booking, and the delete button, which permanently deletes the booking in question.
 
-What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
+  * All of the above is only viewable on the Index page if the user is signed in. If they are not, they are instead informed that they need to sign in or sign up to continue, and provides links to do either action.
+
+* The Bookings page exclusively features a simple form for the user to fill out, allowing the user to choose the date, time, and preferred table for their booking. If the chosen table is not available at that time on that day, the booking is not made and the user is informed by an alert that this is the case. If instead the table is available, then the booking is added to the database and the user is redirected back to the Index page.
+
+* The Edit page is for all intents and purposes identical to the Bookings page, except the form has already been filled out with the original details of the booking being edited. Should the new booking be unavailable in the same manner as one made on the Booking page, and alert will inform the user that this is the case without overwriting the old booking. If it is valid, then the old booking is replaced with the new one, and the user is again redirected back to the Index page.
+
+* The Contacts page, much like the Home page, features only text, this time containing the email, phone number, and address of the Restuarant so that it can be contacted should the need arise.
 
 ### Accessibility
 
-Be an amazing developer and get used to thinking about accessibility in all of your projects!
+I have been mindful during coding to ensure that the website is as accessible as possible. I have achieved this by:
 
-This is the place to make a note of anything you have done with accessibility in mind. Some examples include:
-
-Have you used icons and added aria-labels to enable screen readers to understand these?
-Have you ensured your site meets the minimum contrast requirements?
-Have you chosen fonts that are dyslexia/accessible friendly?
-
-Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
+* Using semantic HTML.
+* Using descriptive alt attributes on images on the site.
+* Ensuring that there is a sufficient colour contrast throughout the site.
+* Ensuring the nav menu is accessible by marking the current page as active for the user if it is on the navbar.
+* Ensuring that the elements on the site adapt and change with the screen size.
 
 ## Technologies Used
 
-👩🏻‍💻 View an example of a completed Technologies Used section [here](https://github.com/kera-cudmore/Bully-Book-Club#Technologies-Used)
-
 ### Languages Used
 
-Make a note here of all the languages used in creating your project. For the first project this will most likely just be HTML & CSS.
+HTML, CSS, JavaScript and Python were used to create this website.
 
 ### Frameworks, Libraries & Programs Used
 
-Add any frameworks, libraries or programs used while creating your project.
+Git - For version control.
 
-Make sure to include things like git, GitHub, the program used to make your wireframes, any programs used to compress your images, did you use a CSS framework like Bootstrap? If so add it here (add the version used).
+Github - To save and store the files for the website.
 
-A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
+Bootstrap Version 5 - The styling framework for the website. Styling for the almost everything in the website came from here. Additional CSS styling was also implemented in the style sub-element of the head element in the site_page.html file.
+
+Google Fonts - To import the fonts used on the website.
+
+Django v3 - The main framework for the website. The code for the database, user authentication and authorisation, and even the form came from here.
+
+[Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
 
 ## Deployment & Local Development
 
@@ -156,17 +167,9 @@ Place instructions on how to clone your project here.
 
 ## Testing
 
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
-
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
-  
-Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
+You can see the information on testing [here](TESTING.md)
 
 ## Credits
-
-👩🏻‍💻 View an example of a completed Credits section [here](https://github.com/kera-cudmore/BookWorm#Credits)
-
-The Credits section is where you can credit all the people and sources you used throughout your project.
 
 ### Code Used
 
@@ -174,7 +177,7 @@ I borrowed the initial code for the navbar from the "I Think Therefore I Blog" W
 
 ### Content
 
-Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
+I made the site for a theoretical client. The client was modelled off of what I envisioned a restuarant owner who wished to create a seperate site solely to handle table bookings might want, and used to dictate what content should or should not be pursued, alongside User Stories for theoretical New and Returning Customers.
 
 ###  Media
 
@@ -182,4 +185,4 @@ There are only two images used in my site. The first is the logo at the top of e
   
 ###  Acknowledgments
 
-I'd like to thank my mentor
+I'd like to thank my mentor Jubril Akolade for being of incredible help. Thanks to him, I was able to gain access to the User authentication pages templates. Unfortunately, I do not have the time to implement and alter them, which is why such has not yet occured, much to my chagrin. Still, it is thanks to my mentor sessions with him that I was able to maintain my determination that in spite of the relatively lacking time I had left, I could still complete the project.

@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 
 class Table(models.Model):
+    """creates model for all tables"""
     size = models.IntegerField(null=False, blank=False)
     category = models.CharField(max_length=10, null=False, blank=False)
     upper_limit = models.IntegerField(null=False, blank=False)
@@ -15,6 +16,7 @@ class Table(models.Model):
 
 
 class Timeslot(models.Model):
+    """creates model for all timeslots"""
     time = models.TimeField(null=False, blank=False)
 
     def __str__(self):
@@ -22,6 +24,7 @@ class Timeslot(models.Model):
 
 
 class Booking(models.Model):
+    """creates model for all bookings"""
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="booking"
     )

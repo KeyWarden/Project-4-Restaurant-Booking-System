@@ -9,10 +9,12 @@ from .forms import BookingForm
 
 
 def home_page(request):
+    """redirects user to home page"""
     return render(request, 'booking/home.html')
 
 
 def view_index(request):
+    """redirects user to index page"""
     bookings = Booking.objects.all()
     context = {
         'bookings': bookings
@@ -21,12 +23,15 @@ def view_index(request):
 
 
 def open_contacts(request):
+    """redirects user to contacts page"""
     return render(request, 'booking/contacts.html')
 
 
 def make_booking(request):
+    """redirects user to bookings page"""
     is_new = True
     if request.method == 'POST':
+        """updates bookings database if booking is valid"""
         form = BookingForm(request.POST)
         if form.is_valid():
             user = request.user
@@ -57,6 +62,7 @@ def make_booking(request):
 
 
 def validate_booking(date, table, timeslot):
+    """validates the booking"""
     check_booking = Booking.objects.filter(
         date=date, table=table,
         timeslot=timeslot
@@ -68,9 +74,11 @@ def validate_booking(date, table, timeslot):
 
 
 def edit_booking(request, booking_id):
+    """redirects user to the edit page"""
     booking = get_object_or_404(Booking, id=booking_id)
     is_new = True
     if request.method == 'POST':
+        """updates bookings database if booking is valid"""
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             user = request.user
@@ -102,6 +110,7 @@ def edit_booking(request, booking_id):
 
 
 def delete_booking(request, booking_id):
+    """deletes selected booking from the database"""
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
     return redirect('Index')
