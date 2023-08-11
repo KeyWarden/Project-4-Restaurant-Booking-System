@@ -2,9 +2,9 @@
 
 The Mama Jo's Booking Site is designed to be a responsive website that allows customers of the Mama Jo's Pizza Restaurant to view the site across a range of devices so that they can book tables at said restaurant ahead of time.
 
-Add an image of the finished site here. I like to use [amiresponsive](https://ui.dev/amiresponsive) to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
+![Mama Jo's](Images/Readme/multi_size_site_mockup.png)
 
-Add a link to the live site here, for Milestone 1 this will be the GitHub Pages Link from when you deployed the site.
+Link to the site here: https://project-4-restaurant-booking.herokuapp.com/
 
 ---
 
@@ -105,15 +105,25 @@ The website is composed of five pages, two of which are accessible from the navi
 
 * The Home page excusively features a simple welcoming message, which informs the user of the site's purpose, as well as how to use its services. It also features links to the Index page.
 
+![Home Page](Images/Readme/home_page.png)
+
 * The Index page excusively features a table containing all bookings the user has made, if they have made any, as well as a button to take them to the Bookings page in order to make new bookings. If the user has made any bookings, then this page also features two buttons by every booking: the edit button, which takes the user to the Edit page so they can edit the booking, and the delete button, which permanently deletes the booking in question.
+
+![Index Page - signed in](Images/Readme/index_page_user.png)
 
   * All of the above is only viewable on the Index page if the user is signed in. If they are not, they are instead informed that they need to sign in or sign up to continue, and provides links to do either action.
 
+![Index Page - signed out](Images/Readme/index_page_guest.png)
+
 * The Bookings page exclusively features a simple form for the user to fill out, allowing the user to choose the date, time, and preferred table for their booking. If the chosen table is not available at that time on that day, the booking is not made and the user is informed by an alert that this is the case. If instead the table is available, then the booking is added to the database and the user is redirected back to the Index page.
+
+![Bookings Page](Images/Readme/bookings_page.png)
 
 * The Edit page is for all intents and purposes identical to the Bookings page, except the form has already been filled out with the original details of the booking being edited. Should the new booking be unavailable in the same manner as one made on the Booking page, and alert will inform the user that this is the case without overwriting the old booking. If it is valid, then the old booking is replaced with the new one, and the user is again redirected back to the Index page.
 
 * The Contacts page, much like the Home page, features only text, this time containing the email, phone number, and address of the Restuarant so that it can be contacted should the need arise.
+
+![Contacts Page](Images/Readme/contacts_page.png)
 
 ### Accessibility
 
@@ -145,26 +155,6 @@ Django v3 - The main framework for the website. The code for the database, user 
 
 [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
 
-## Deployment & Local Development
-
-👩🏻‍💻 View an example of a completed Deployment & Local Development section [here](https://github.com/kera-cudmore/TheQuizArms#Deployment)
-
-### Deployment
-
-Include instructions here on how to deploy your project. For your first project you will most likely be using GitHub Pages.
-
-### Local Development
-
-The local development section gives instructions on how someone else could make a copy of your project to play with on their local machine. This section will get more complex in the later projects, and can be a great reference to yourself if you forget how to do this.
-
-#### How to Fork
-
-Place instructions on how to fork your project here.
-
-#### How to Clone
-
-Place instructions on how to clone your project here.
-
 ## Testing
 
 You can see the information on testing [here](TESTING.md)
@@ -186,3 +176,5 @@ There are only two images used in my site. The first is the logo at the top of e
 ###  Acknowledgments
 
 I'd like to thank my mentor Jubril Akolade for being of incredible help. Thanks to him, I was able to gain access to the User authentication pages templates. Unfortunately, I do not have the time to implement and alter them, which is why such has not yet occured, much to my chagrin. Still, it is thanks to my mentor sessions with him that I was able to maintain my determination that in spite of the relatively lacking time I had left, I could still complete the project.
+
+I would also like to thank my fellow programmers on Slack, who helped me through my problems with the deployment process, allowing me to finally finish this project.
