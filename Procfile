@@ -1,1 +1,1 @@
-web: gunicorn django_todo.wsgi:application
+web: gunicorn django_restaurant_booking_system.wsgi:application
